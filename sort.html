@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="sortfunction()">Sort me</button>
+    <button onclick="reversefunction()">Reverse me</button>
+
+    <p id="result"></p>
+
+    <p>Multiply every element in the array with 10:</p>
+    <p id="product_value"></p>
+    <script>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      document.getElementById("result").innerHTML = fruits;
+
+      function sortfunction() {
+        fruits.sort();
+        document.getElementById("result").innerHTML = fruits;
+      }
+      function reversefunction() {
+        fruits.reverse();
+        document.getElementById("result").innerHTML = fruits;
+      }
+
+      var numbers = [28, 6, 19, 95, 45, 73, 58];
+
+      function myFunction(num) {
+        return num * 10;
+      }
+
+      var newarray = numbers.map(myFunction);
+      document.getElementById("product_value").innerHTML = newarray;
+    </script>
+  </body>
+</html>
